@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="Tests"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="lib" path="/home/alba/Descargas/mockito-junit-jupiter-3.7.7.jar"/>
+	<classpathentry kind="lib" path="/home/alba/Descargas/objenesis-3.1.jar"/>
+	<classpathentry kind="lib" path="/home/alba/Descargas/byte-buddy-agent-1.10.19.jar"/>
+	<classpathentry kind="lib" path="/home/alba/Descargas/byte-buddy-1.10.19.jar"/>
+	<classpathentry kind="lib" path="/home/alba/Descargas/mockito-core-3.7.7.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

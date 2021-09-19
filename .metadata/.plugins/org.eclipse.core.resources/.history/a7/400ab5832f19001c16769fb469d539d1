@@ -1,0 +1,54 @@
+package mockito;
+
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import static org.mockito.ArgumentMatchers.any;
+
+class MessengerTest {
+
+	private static final String RANDOM_EMAIL = "someone@example.com";
+	private static final String RANDOM_MESSAGE = "Random message";
+
+	@Mock
+	private TemplateEngine templateEngineMock;
+	@Mock
+	private MailServer mailServerMock;
+	
+	private AutoCloseable closeable;
+	@InjectMocks
+	private Messenger messenger;
+	
+	@BeforeEach
+	void setUp() {
+		//templateEngineMock = mock(TemplateEngine.class);
+		//MockitoAnnotations.initMocks(this);
+		closeable = MockitoAnnotations.openMocks(this);
+	}
+	
+	@AfterEach
+	void setOff() throws Exception {
+		closeable.close();
+	}
+
+	@Test
+	void shouldSendMessage() {
+		var client = new Client(RANDOM_EMAIL);
+		var template = new Template();
+		
+		when(templateEngineMock.prepareMessage(client, template)).thenReturn(RANDOM_MESSAGE);
+		
+		messenger.sendMessage(client, template);
+		
+		verify(templateEngineMock).prepareMessage(client, template);
+		verify(mailServerMock).sendEmail(any(Email.class));
+	}
+}

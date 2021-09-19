@@ -1,0 +1,23 @@
+package mockito;
+
+public class Messenger {
+	private TemplateEngine templateEngine;
+	private MailServer mailServer;
+	
+	public TemplateEngine getTemplateEngine() {
+		return templateengine;
+	}
+	
+	public MailServer getMailServer() {
+		return mailServer;
+	}
+	
+	public void setTemplateEngine(TemplateEngine templateEngine) {
+		this.templateEngine = templateEngine;
+	}
+	
+	public void setMailServer(MailServer mailServer) {
+		this.mailServer = mailServer;
+	}
+
+}

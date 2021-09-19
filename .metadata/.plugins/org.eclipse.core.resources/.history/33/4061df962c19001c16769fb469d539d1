@@ -1,0 +1,16 @@
+package mockito;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class MessengerTest {
+
+	private static final String RANDOM_EMAIL = "someone@example.com";
+
+	@Test
+	void shouldSendMessage() {
+		var client = new Client(RANDOM_EMAIL);
+	}
+
+}
