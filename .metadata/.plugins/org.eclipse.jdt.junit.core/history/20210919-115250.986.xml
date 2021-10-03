@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="MessengerTest" project="mockito" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="mockito.MessengerTest" time="0.628" displayname="MessengerTest" uniqueid="[engine:junit-jupiter]/[class:mockito.MessengerTest]">
-    <testcase name="shouldSendMessage" classname="mockito.MessengerTest" time="0.628" displayname="shouldSendMessage()" uniqueid="[engine:junit-jupiter]/[class:mockito.MessengerTest]/[method:shouldSendMessage()]"/>
-  </testsuite>
-</testrun>

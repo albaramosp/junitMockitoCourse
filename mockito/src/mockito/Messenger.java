@@ -29,5 +29,9 @@ public class Messenger {
 		
 		mailServer.sendEmail(email);
 	}
+	
+	public void test(Template t) {
+		templateEngine.evaluateTemplate(t);
+	}
 
 }
